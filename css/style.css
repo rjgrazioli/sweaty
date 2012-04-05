@@ -1,0 +1,284 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* End CSS Reset */
+
+body {
+	font-family: 'Calibri', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.screen {
+	width: 320px;
+	margin: 0 auto;
+	background: #f4f4f4;
+	/*padding-top: 45px;*/
+}
+.screen:after {
+	content: "";
+	visibility: hidden;
+	display: block;
+	clear: both;
+	height: 0;
+}
+
+.container {
+	width: 310px;
+	padding: 0 5px;
+}
+.container:after {
+	content: "";
+	visibility: hidden;
+	display: block;
+	clear: both;
+	height: 0;
+}
+
+/* Element Styling */
+
+a, a:hover, a:active {
+	text-decoration: none;
+}
+
+strong {
+	font-weight: bold;
+}
+
+.profile-pic.mini {
+	width: 35px;
+	height: 30px;
+	overflow: hidden;
+}
+.profile-pic img {
+	max-height: 100%;
+}
+
+.block {
+	display: block;
+}
+
+/* Main Header */
+
+.header {
+	height: 30px;
+	padding: 5px 5px;
+}
+.header.fixed {
+	position: fixed;
+	top:0;
+	z-index: 999999;
+}
+.header-left {
+	width: 65px;
+	height: 30px;
+	float: left;
+}
+.header-left .btn {
+	width: 60px;
+}
+.header-center {
+	width: 180px;
+	height: 30px;
+	float: left;
+	color: #ffffff;
+	font-size: 23px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 29px;
+}
+.header-right {
+	width: 65px;
+	height: 30px;
+	float: left;
+}
+
+/* Profile Page */
+
+#big-image {
+	width: 320px;
+	height: 170px;
+	position: relative;
+	padding: 0;
+	background: #555555;
+	overflow: hidden;
+}
+#big-image img {
+	width: 100%;
+}
+#big-image .flip-icon {
+	width: 26px;
+	height: 26px;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+.favorite-icon img {
+	max-width: 100%;
+}
+.follow-bar {
+	height: 36px;
+	padding: 5px 5px;
+	background: #353535;
+}
+.follow-bar .stats {
+	width: 230px;
+	float: left;
+}
+.follow-bar .address {
+	width: 230px;
+	float: left;
+}
+.follow-bar .stats > div {
+	width: 110px;
+	height: 26px;
+	margin: 5px 0;
+	float: left;
+	line-height: 26px;
+	font-size: 14px;
+	color: #ffffff;
+	font-weight: bold;
+}
+.follow-bar .address > div {
+	width: 230px;
+	height: 18px;
+	line-height: 18px;
+	font-size: 12px;
+	color: #ffffff;
+	font-weight: bold;
+}
+.stats span {
+	padding-left: 10px;
+}
+.follow-bar .btn {
+	height: 26px;
+	width: 80px;
+	margin: 5px 0;
+	background: #279FF5;
+	border-radius: 2px;
+	line-height: 26px;
+	text-align: center;
+	font-size: 14px;
+	float: right;
+	font-weight: bold;
+	color: #ffffff;
+}
+.follow-bar div.name {
+	height: 20px;
+	line-height: 20px;
+	font-size: 16px;
+}
+.follow-bar div.location {
+	height: 16px;
+	line-height: 16px;`
+}
+.location img {
+	width: 10px;
+	padding-right: 3px;
+}
+
+.white-box {
+	padding: 5px;
+	background: #ffffff;
+	margin: 10px 0;
+	box-shadow: 0 0 2px #cccccc;
+}
+.post:after {
+	content: "";
+	visibility: hidden;
+	display: block;
+	clear: both;
+}
+.white-box .profile-pic {
+	float: left;
+}
+.white-box .note-box {
+	width: 255px;
+	margin-left: 10px;
+	float: left;
+	font-size: 14px;
+	line-height: 16px;
+}
+.white-box .post-extras {
+	width: 255px;
+	height: 25px;
+	margin-left: 45px;
+}
+.post-extras .icons {
+	width: 160px;
+	height: 15px;
+	padding: 5px 0 4px;
+}
+.icons:after {
+	content: "";
+	visibility: hidden;
+	display: block;
+	clear: both;
+}
+.icons .icon {
+	display: block;
+	float: left;
+	height: 16px;
+	padding-right: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

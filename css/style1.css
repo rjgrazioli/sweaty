@@ -1,0 +1,265 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* End CSS Reset */
+
+body {
+	font-family: 'Calibri', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.screen {
+	width: 320px;
+	margin: 0 auto;
+	background: #f4f4f4;
+	padding-top: 45px;
+}
+.screen:after {
+	content: "";
+	visibility: hidden;
+	display: block;
+	clear: both;
+	height: 0;
+}
+
+.container {
+	width: 310px;
+	padding: 0 5px;
+}
+.container:after {
+	content: "";
+	visibility: hidden;
+	display: block;
+	clear: both;
+	height: 0;
+}
+
+/* Element Styling */
+
+strong {
+	font-weight: bold;
+}
+
+.profile-pic.mini {
+	width: 35px;
+	height: 30px;
+	overflow: hidden;
+}
+.profile-pic img {
+	max-height: 100%;
+}
+
+/* Main Header */
+
+.header {
+	height: 35px;
+	padding: 5px 5px;
+	background: #000000;
+	position: fixed;
+	top:0;
+}
+.header-left {
+	width: 65px;
+	height: 35px;
+	float: left;
+}
+.header-center {
+	width: 180px;
+	height: 35px;
+	float: left;
+	color: #ffffff;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 35px;
+}
+.header-right {
+	width: 65px;
+	height: 35px;
+	float: left;
+}
+
+/* Profile Page */
+
+#profile-info {
+	width: 310px;
+	height: 120px;
+	padding: 5px;
+	background: #555555;
+}
+#profile-info .profile-pic {
+	width: 140px;
+	height: 120px;
+	overflow: hidden;
+	float: left;
+}
+#profile-info .favorites {
+	width: 160px;
+	height: 120px;
+	margin-left: 10px;
+	float: left;
+}
+.favorites .item {
+	width: 160px;
+	height: 16px;
+	padding: 2px 0;
+	color: #ffffff;
+}
+.favorites .category {
+	width: 130px;
+	height: 16px;
+	float: left;
+	line-height: 16px;
+	font-size: 14px;
+	font-weight: bold;
+}
+.favorites .number {
+	width: 30px;
+	height: 16px;
+	float: left;
+	background: #279FF5;
+	border-radius: 2px;
+	text-align: center;
+	font-size: 13px;
+	font-weight: bold;
+}
+.follow-bar {
+	height: 36px;
+	padding: 5px 5px;
+	background: #353535;
+}
+.follow-bar .stats {
+	width: 230px;
+	float: left;
+}
+.follow-bar .stats > div {
+	width: 230px;
+	height: 18px;
+	line-height: 18px;
+	font-size: 13px;
+	color: #ffffff;
+	font-weight: bold;
+}
+.stats span {
+	padding-left: 20px;
+}
+.follow-bar .btn {
+	height: 26px;
+	width: 80px;
+	margin: 5px 0;
+	background: #279FF5;
+	border-radius: 2px;
+	line-height: 26px;
+	text-align: center;
+	font-size: 14px;
+	float: right;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.white-box {
+	padding: 5px;
+	background: #ffffff;
+	margin: 10px 0;
+	box-shadow: 0 0 2px #cccccc;
+}
+.post:after {
+	content: "";
+	visibility: hidden;
+	display: block;
+	clear: both;
+}
+.white-box .profile-pic {
+	float: left;
+}
+.white-box .note-box {
+	width: 255px;
+	margin-left: 10px;
+	float: left;
+	font-size: 14px;
+	line-height: 16px;
+}
+.white-box .post-extras {
+	width: 255px;
+	height: 25px;
+	margin-left: 45px;
+}
+.post-extras .icons {
+	width: 160px;
+	height: 15px;
+	padding: 5px 0 4px;
+}
+.icons:after {
+	content: "";
+	visibility: hidden;
+	display: block;
+	clear: both;
+}
+.icons .icon {
+	display: block;
+	float: left;
+	height: 16px;
+	padding-right: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
