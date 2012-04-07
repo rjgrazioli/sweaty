@@ -8,10 +8,10 @@
 		<input type="text" class="filter" placeholder="Search Category">
 		<input type="text" class="address" placeholder="Near Here...">
 	</div><!-- .header -->
-	<div class="second-bar container">
-			<div class="oneline-center">Can't find what you looking for?</div><!-- .stats -->
-		<div class="btn">Add It +</div><!-- .btn -->
-	</div><!-- .follow-bar container -->
+	<div class="second-bar light container">
+		<div class="toggle2">Date</div><!-- .toggle2 -->
+		<div class="toggle2 last down">Distance</div><!-- .toggle2 -->
+	</div><!-- .second-bar -->
 	<div class="container inspire">
 		<? for($i=0;$i<15;$i++) { ?>	
 		<div class="white-box">
@@ -36,7 +36,7 @@
 		<? } ?>
 	</div><!-- .container -->
 
-	<a href="races.php" class="races btn">Races</a>
+	<a href="index.php" class="races btn">Inspire</a>
 
 <? include ('_footer.php') ?>
 

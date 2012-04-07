@@ -47,10 +47,15 @@ table {
 	border-spacing: 0;
 }
 
+input {
+	margin: 0;
+	-webkit-border-radius:0; 
+	border-radius:0;
+}
 /* End CSS Reset */
 
 body {
-	font-family: 'Calibri', 'Helvetica Neue', Helvetica, sans-serif;
+	font-family: 'CalibriRegular', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
 .screen {
@@ -81,6 +86,29 @@ body {
 
 /* Element Styling */
 
+@font-face {
+    font-family: 'CalibriRegular';
+    src: url('../fonts/calibri-webfont.eot');
+    src: url('../fonts/calibri-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/calibri-webfont.woff') format('woff'),
+         url('../fonts/calibri-webfont.ttf') format('truetype'),
+         url('../fonts/calibri-webfont.svg#CalibriRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'CalibriBold';
+    src: url('../fonts/calibri_bold-webfont.eot');
+    src: url('../fonts/calibri_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/calibri_bold-webfont.woff') format('woff'),
+         url('../fonts/calibri_bold-webfont.ttf') format('truetype'),
+         url('../fonts/calibri_bold-webfont.svg#CalibriBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 a, a:hover, a:active {
 	text-decoration: none;
 }
@@ -102,20 +130,68 @@ strong {
 	display: block;
 }
 
+.fixed-2 {
+	position: fixed;
+	top:46px;
+}
+a .post,
+a .listing {
+	color: #4c4c4c;
+}
+.toggle2 {
+	height: 30px;
+	width: 150px;
+	margin: 3px 0;
+	background: #929497;
+	border-radius: 2px;
+	box-shadow: 0 1px 0 #000000;
+	line-height: 30px;
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+	color: #ffffff;
+	float: left;
+}
+.last {
+	margin-left: 10px;
+}
+.toggle2.down {
+	background: #3E3E3F;
+	box-shadow: 0 1px 0 #929497;
+}
+
+/* Grid */
+/* span30 margin10 col8 */
+
 /* Main Header */
 
 .header {
-	height: 30px;
+	height: 36px;
 	padding: 5px 5px;
+}
+.header.black {
+	background: #000000;
 }
 .header.fixed {
 	position: fixed;
 	top:0;
 	z-index: 999999;
 }
+.header input {
+	height: 30px;
+	padding-left: 20px;
+	margin: 2px 0;
+	font-size: 13px;
+}
+.header .filter {
+	width: 200px;
+}
+.header .address {
+	width: 105px;
+}
 .header-left {
 	width: 65px;
-	height: 30px;
+	height: 36px;
 	float: left;
 }
 .header-left .btn {
@@ -123,17 +199,17 @@ strong {
 }
 .header-center {
 	width: 180px;
-	height: 30px;
+	height: 36px;
 	float: left;
 	color: #ffffff;
 	font-size: 23px;
 	font-weight: bold;
 	text-align: center;
-	line-height: 29px;
+	line-height: 36px;
 }
 .header-right {
 	width: 65px;
-	height: 30px;
+	height: 36px;
 	float: left;
 }
 
@@ -160,10 +236,33 @@ strong {
 .favorite-icon img {
 	max-width: 100%;
 }
-.follow-bar {
+.follow-bar,
+.second-bar,
+.third-bar {
 	height: 36px;
 	padding: 5px 5px;
 	background: #353535;
+}
+.second-bar {
+	position: fixed;
+	top:46px;
+}
+.third-bar {
+	position: fixed;
+	top:92px;
+}
+.second-bar.light,
+.third-bar.light {
+	background: #58595B;
+}
+.follow-bar .oneline-center,
+.second-bar .oneline-center {
+	height: 36px;
+	float: left;
+	line-height: 36px;
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: bold;
 }
 .follow-bar .stats {
 	width: 230px;
@@ -174,9 +273,8 @@ strong {
 	float: left;
 }
 .follow-bar .stats > div {
-	width: 110px;
+	width: 230px;
 	height: 26px;
-	margin: 5px 0;
 	float: left;
 	line-height: 26px;
 	font-size: 14px;
@@ -194,13 +292,14 @@ strong {
 .stats span {
 	padding-left: 10px;
 }
-.follow-bar .btn {
-	height: 26px;
+.follow-bar .btn,
+.second-bar .btn {
+	height: 30px;
 	width: 80px;
-	margin: 5px 0;
+	margin: 3px 0;
 	background: #279FF5;
 	border-radius: 2px;
-	line-height: 26px;
+	line-height: 30px;
 	text-align: center;
 	font-size: 14px;
 	float: right;
@@ -227,7 +326,8 @@ strong {
 	margin: 10px 0;
 	box-shadow: 0 0 2px #cccccc;
 }
-.post:after {
+.post:after,
+.listing:after {
 	content: "";
 	visibility: hidden;
 	display: block;
@@ -264,6 +364,53 @@ strong {
 	float: left;
 	height: 16px;
 	padding-right: 5px;
+}
+
+.listing {
+	padding: 5px 0;
+}
+
+.listing .info {
+	width: 200px;
+	float: left;
+}
+
+.listing .name {
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.listing .address {
+	font-size: 12px;]
+	font-weight: bold;
+}
+.listing .icons {
+	width: 70px;
+	margin-left: 10px;
+	float: left;
+}
+
+.races {
+	height: 30px;
+	width: 80px;
+	margin: 3px 0;
+	background: #279FF5;
+	border-radius: 2px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 14px;
+	float: right;
+	font-weight: bold;
+	color: #ffffff;
+	position: fixed;
+	bottom: 0;
+	right: 5px;
+}
+
+/* Inspire */
+
+.inspire {
+	margin-top: 100px;
 }
 
 
